@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Català</title>
 <script>
 function deteccion(){
@@ -92,7 +92,7 @@ function deteccion(){
     	document.write("</tr></table>");
     	document.write("<br>");    
     	document.write("<h1>NO estàs entrant amb 1 mòbil.</h1><br>");
-    	document.write("<b><u>INFO:</u></b> "+navigator.platform+".<br>");
+    	document.write("<b><u>INFO:</u></b> "+navigator.userAgent+".<br>");
     }
 }
 window.onload = setTimeout("deteccion();",1000);
@@ -100,5 +100,8 @@ deteccion();
  </script>
 </head>
 <body>
+<!-- http://stackoverflow.com/questions/19877924/what-is-the-list-of-possible-values-for-navigator-platform-as-of-today -->
+<!-- http://stackoverflow.com/questions/6666907/how-to-detect-a-mobile-device-with-javascript -->
+jj
 </body>
 </html>
