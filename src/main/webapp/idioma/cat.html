@@ -5,6 +5,9 @@
 <title>Català</title>
 <script>
 function deteccion(){
+	if(navigator.platform=='Linux armv7L'){
+		document.write("Entro.<br>");
+    };
     if(navigator.platform == 'iPad' || navigator.platform == 'iPhone' || navigator.platform == 'iPod')
     { 
     	var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
@@ -92,9 +95,13 @@ function deteccion(){
     	document.write("</tr></table>");
     	document.write("<br>");    
     	document.write("<h1>NO estàs entrant amb 1 mòbil.</h1><br>");
-    	document.write("<b><u>INFO:</u></b> "+navigator.userAgent+".<br>");
-    }
-}
+    	if(navigator.platform=='Linux armv7L'){
+    		document.write("<b><u>INFO:</u></b> "+navigator.useragent+".<br>");
+        }else{
+    	    document.write("<b><u>INFO:</u></b> "+navigator.platform+".<br>");
+        };
+    };
+};
 window.onload = setTimeout("deteccion();",1000);
 deteccion();
  </script>
@@ -102,6 +109,5 @@ deteccion();
 <body>
 <!-- http://stackoverflow.com/questions/19877924/what-is-the-list-of-possible-values-for-navigator-platform-as-of-today -->
 <!-- http://stackoverflow.com/questions/6666907/how-to-detect-a-mobile-device-with-javascript -->
-jj
 </body>
 </html>
