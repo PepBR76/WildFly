@@ -5,8 +5,9 @@
 <title>Català</title>
 <script>
 function deteccion(){
-	if(navigator.platform=='Linux armv7L'){
-		document.write("Entro.<br>");
+	if(navigator.platform!=''){
+		document.write("Entro plataforma.<br>");
+		document.write("<b><u>INFO:</u></b> "+navigator.platform+".<br>");
     };
     if(navigator.platform == 'iPad' || navigator.platform == 'iPhone' || navigator.platform == 'iPod')
     { 
@@ -93,7 +94,8 @@ function deteccion(){
     	document.write("<td><img alt='Google+' title='Google+' style= 'background-color: red' src='https://geltapp.com/wp-content/uploads/2016/04/gp.png'></td>");
     	document.write("<td><img alt='E-mail' title='E-mail' style= 'background-color: red' src='https://geltapp.com/wp-content/uploads/2016/04/mail.png'></td>");
     	document.write("</tr></table>");
-    	document.write("<br>");    
+    	document.write("<br>"); 
+    	document.write("Entro no mòbil.<br>")   
     	document.write("<h1>NO estàs entrant amb 1 mòbil.</h1><br>");
     	if(navigator.platform=='Linux armv7L'){
     		document.write("EntroL.<br>");
@@ -102,7 +104,6 @@ function deteccion(){
         }else{
         	document.write("EntroNO-L.<br>");
         	document.write("<b><u>INFO:</u></b> "+navigator.platform+".<br>");
-    	    document.write("<b><u>INFO:</u></b> "+navigator.platform+".<br>");
         };
     };
 };
